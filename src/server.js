@@ -275,10 +275,14 @@ app.use((_request, response) => {
   response.sendFile(path.join(publicDir, "index.html"));
 });
 
-if (!config.demoMode) {
+if (!config.demoMode && require.main === module) {
   startHistoricalRefreshSchedule();
 }
 
-app.listen(config.port, () => {
-  console.log(`Painel rodando em http://localhost:${config.port}`);
-});
+if (require.main === module) {
+  app.listen(config.port, () => {
+    console.log(`Painel rodando em http://localhost:${config.port}`);
+  });
+}
+
+module.exports = app;
