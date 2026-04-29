@@ -1,0 +1,23 @@
+{
+  "name": "painel-negociacao-nectar",
+  "version": "1.0.0",
+  "description": "Painel de negociacao Syscob sem n8n, com frontend e backend proprios.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "syscob",
+    "nectar",
+    "negociacao",
+    "whatsapp"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "tedious": "^19.2.1"
+  }
+}
